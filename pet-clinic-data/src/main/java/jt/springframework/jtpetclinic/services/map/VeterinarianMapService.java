@@ -1,7 +1,7 @@
 package jt.springframework.jtpetclinic.services.map;
 
 import jt.springframework.jtpetclinic.model.Veterinarian;
-import jt.springframework.jtpetclinic.services.CrudService;
+import jt.springframework.jtpetclinic.services.VeterinarianService;
 
 import java.util.Optional;
 import java.util.Set;
@@ -9,7 +9,7 @@ import java.util.Set;
 /**
  * Craeted by JT on 9/30/2018
  */
-public class VeterinarianMapService extends AbstractMapService<Veterinarian, Long> implements CrudService<Veterinarian, Long> {
+public class VeterinarianMapService extends AbstractMapService<Veterinarian, Long> implements VeterinarianService {
 
     @Override
     public Set<Veterinarian> findAll() {
