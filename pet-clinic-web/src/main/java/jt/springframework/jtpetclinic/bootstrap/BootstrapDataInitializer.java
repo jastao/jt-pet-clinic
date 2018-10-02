@@ -46,9 +46,9 @@ public class BootstrapDataInitializer implements CommandLineRunner {
         this.veterinarianMapService.save(vet1);
 
         Veterinarian vet2 = new Veterinarian();
-        vet1.setId(2L);
-        vet1.setFirstName("Pete");
-        vet1.setLastName("Abraham");
+        vet2.setId(2L);
+        vet2.setFirstName("Pete");
+        vet2.setLastName("Abraham");
         this.veterinarianMapService.save(vet2);
 
         System.out.println("Loading Vets...");

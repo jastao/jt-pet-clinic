@@ -1,6 +1,6 @@
 package jt.springframework.jtpetclinic.controllers;
 
-import jt.springframework.jtpetclinic.services.map.OwnerMapService;
+import jt.springframework.jtpetclinic.services.OwnerService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,16 +13,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/owners")
 public class OwnerController {
 
-    private final OwnerMapService ownerMapService;
+    private final OwnerService ownerService;
 
-    public OwnerController(OwnerMapService ownerMapService) {
-        this.ownerMapService = ownerMapService;
+    public OwnerController(OwnerService ownerService) {
+        this.ownerService = ownerService;
     }
 
     @RequestMapping({"/", "/index", "/index.html"})
     public String listOwners(Model model) {
 
-        model.addAttribute("owners", this.ownerMapService.findAll());
+        model.addAttribute("owners", this.ownerService.findAll());
 
         return "owners/index";
     }
