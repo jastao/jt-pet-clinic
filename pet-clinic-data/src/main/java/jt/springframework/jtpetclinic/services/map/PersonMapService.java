@@ -2,6 +2,7 @@ package jt.springframework.jtpetclinic.services.map;
 
 import jt.springframework.jtpetclinic.model.Pet;
 import jt.springframework.jtpetclinic.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import java.util.Set;
@@ -9,6 +10,7 @@ import java.util.Set;
 /**
  * Craeted by JT on 9/30/2018
  */
+@Service
 public class PersonMapService extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override

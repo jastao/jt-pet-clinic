@@ -14,11 +14,12 @@ import org.springframework.stereotype.Component;
 public class BootstrapDataInitializer implements CommandLineRunner {
 
     private final OwnerMapService ownerMapService;
+
     private final VeterinarianMapService veterinarianMapService;
 
-    public BootstrapDataInitializer() {
-        this.ownerMapService = new OwnerMapService();
-        this.veterinarianMapService = new VeterinarianMapService();
+    public BootstrapDataInitializer(OwnerMapService ownerMapService, VeterinarianMapService veterinarianMapService) {
+        this.ownerMapService = ownerMapService;
+        this.veterinarianMapService = veterinarianMapService;
     }
 
     @Override

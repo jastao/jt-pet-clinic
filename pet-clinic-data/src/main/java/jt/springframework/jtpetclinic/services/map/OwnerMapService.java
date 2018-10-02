@@ -2,6 +2,7 @@ package jt.springframework.jtpetclinic.services.map;
 
 import jt.springframework.jtpetclinic.model.Owner;
 import jt.springframework.jtpetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import java.util.Set;
@@ -9,6 +10,7 @@ import java.util.Set;
 /**
  * Craeted by JT on 9/30/2018
  */
+@Service
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
